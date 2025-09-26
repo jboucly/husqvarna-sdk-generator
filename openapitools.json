@@ -4,13 +4,51 @@
     "generator-cli": {
         "version": "7.14.0",
         "generators": {
-            "typescript-sdk": {
+            "husqvarna-authentication-sdk": {
                 "generatorName": "typescript-axios",
-                "inputSpec": "./openapi.yml",
-                "output": "./package",
+                "inputSpec": "./husqvarna-authentication.yml",
+                "output": "./packages/husqvarna-authentication-sdk",
                 "additionalProperties": {
-                    "npmName": "@jboucly/automower",
-                    "npmVersion": "1.0.3",
+                    "npmName": "@jboucly/husqvarna-authentication-sdk",
+                    "npmVersion": "1.0.0",
+                    "supportsES6": true,
+                    "useESModules": true,
+                    "withInterfaces": true,
+                    "modelPropertyNaming": "camelCase",
+                    "enumPropertyNaming": "UPPERCASE",
+                    "stringEnums": true,
+                    "useSingleRequestParameter": false,
+                    "withSeparateModelsAndApi": true,
+                    "apiPackage": "api",
+                    "modelPackage": "models"
+                }
+            },
+            "automower-connect-sdk": {
+                "generatorName": "typescript-axios",
+                "inputSpec": "./husqvarna-automower.yml",
+                "output": "./packages/automower-connect-sdk",
+                "additionalProperties": {
+                    "npmName": "@jboucly/automower-connect-sdk",
+                    "npmVersion": "1.0.0",
+                    "supportsES6": true,
+                    "useESModules": true,
+                    "withInterfaces": true,
+                    "modelPropertyNaming": "camelCase",
+                    "enumPropertyNaming": "UPPERCASE",
+                    "stringEnums": true,
+                    "useSingleRequestParameter": false,
+                    "withSeparateModelsAndApi": true,
+                    "apiPackage": "api",
+                    "modelPackage": "models"
+                }
+            },
+            "husqvarna-connectivity-sdk": {
+                "generatorName": "typescript-axios",
+                "inputSpec": "./husqvarna-connectivity.yml",
+                "output": "./packages/husqvarna-connectivity-sdk",
+                "additionalProperties": {
+                    "npmName": "@jboucly/husqvarna-connectivity-sdk",
+                    "npmVersion": "1.0.0",
                     "supportsES6": true,
                     "useESModules": true,
                     "withInterfaces": true,
