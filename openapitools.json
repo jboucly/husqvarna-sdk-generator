@@ -1,0 +1,28 @@
+{
+    "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+    "spaces": 2,
+    "generator-cli": {
+        "version": "7.14.0",
+        "generators": {
+            "typescript-sdk": {
+                "generatorName": "typescript-axios",
+                "inputSpec": "./openapi.yml",
+                "output": "./package",
+                "additionalProperties": {
+                    "npmName": "@jboucly/automower",
+                    "npmVersion": "1.0.3",
+                    "supportsES6": true,
+                    "useESModules": true,
+                    "withInterfaces": true,
+                    "modelPropertyNaming": "camelCase",
+                    "enumPropertyNaming": "UPPERCASE",
+                    "stringEnums": true,
+                    "useSingleRequestParameter": false,
+                    "withSeparateModelsAndApi": true,
+                    "apiPackage": "api",
+                    "modelPackage": "models"
+                }
+            }
+        }
+    }
+}

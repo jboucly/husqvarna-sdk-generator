@@ -1,0 +1,31 @@
+{
+    "name": "husqvarna-sdk-generator",
+    "version": "0.0.0",
+    "description": "Generator of SDK for Husqvarna APIs",
+    "scripts": {
+        "fetch:openapi": "zx ./scripts/fetchOpenApi.mjs",
+        "sdk:generate": "openapi-generator-cli generate --generator-key typescript-sdk",
+        "sdk:build": "zx ./scripts/build-sdk.mjs"
+    },
+    "keywords": [
+        "husqvarna",
+        "automower",
+        "sdk",
+        "generator",
+        "openapi"
+    ],
+    "author": {
+        "name": "Jboucly",
+        "email": "contact@jboucly.fr"
+    },
+    "license": "MIT",
+    "packageManager": "pnpm@10.17.1",
+    "devDependencies": {
+        "@openapitools/openapi-generator-cli": "^2.23.4",
+        "chalk": "^5.6.2",
+        "dotenv": "^17.2.2",
+        "rimraf": "^6.0.1",
+        "ts-node": "^10.9.2",
+        "zx": "^8.8.3"
+    }
+}
