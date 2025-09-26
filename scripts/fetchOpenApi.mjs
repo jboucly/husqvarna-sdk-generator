@@ -46,11 +46,11 @@ await spinner(chalk.gray("Waiting please..."), () => $`pnpm rimraf openApi`);
 
 console.info(scriptName, chalk.white("Fetching OpenAPI spec..."));
 await spinner(chalk.gray("Waiting please..."), () =>
-    fetchOpenApiSpec(AUTH_API_URL, "openApi/auth.yml")
+    fetchOpenApiSpec(AUTH_API_URL, "openApi/husqvarna-authentication.yml")
 );
 await spinner(chalk.gray("Waiting please..."), () =>
-    fetchOpenApiSpec(CONNECT_API_URL, "openApi/connect.yml")
+    fetchOpenApiSpec(CONNECT_API_URL, "openApi/husqvarna-connectivity.yml")
 );
 await spinner(chalk.gray("Waiting please..."), () =>
-    fetchOpenApiSpec(AUTO_MOWER_API_URL, "openApi/automower.yml")
+    fetchOpenApiSpec(AUTO_MOWER_API_URL, "openApi/automower-connect.yml")
 );
