@@ -1,0 +1,48 @@
+{
+  "name": "@jboucly/automower-connect-sdk",
+  "version": "1.0.0",
+  "description": "OpenAPI client for @jboucly/automower-connect-sdk",
+  "author": "OpenAPI-Generator Contributors",
+  "keywords": [
+    "axios",
+    "typescript",
+    "openapi-client",
+    "openapi-generator",
+    "@jboucly/automower-connect-sdk"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.11.5 - 12.20.42",
+    "typescript": "^4.0 || ^5.0"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "dist/esm"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js"
+    },
+    "./models/*": {
+      "import": "./dist/esm/models/*.js",
+      "require": "./dist/models/*.js"
+    },
+    "./api/*": {
+      "import": "./dist/esm/api/*.js",
+      "require": "./dist/api/*.js"
+    }
+  }
+}
