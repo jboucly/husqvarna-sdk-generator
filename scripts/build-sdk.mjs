@@ -16,9 +16,21 @@ const scriptName = chalk.cyan("[ Build SDK ] ");
 
 /** ############################## DEFINE FUNCTIONS ############################## */
 
-async function setTypeModuleAndUpdateTsConfig() {
-    const pkgPath = path.join(__dirname, "..", "package", "package.json");
-    const tsconfigPath = path.join(__dirname, "..", "package", "tsconfig.json");
+async function setTypeModuleAndUpdateTsConfig(name) {
+    const pkgPath = path.join(
+        __dirname,
+        "..",
+        "packages",
+        name,
+        "package.json"
+    );
+    const tsconfigPath = path.join(
+        __dirname,
+        "..",
+        "packages",
+        name,
+        "tsconfig.json"
+    );
 
     if (fs.existsSync(pkgPath)) {
         const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
@@ -80,18 +92,46 @@ try {
     console.info(scriptName, chalk.white("Removing previous SDK..."));
     await spinner(
         chalk.gray("Waiting please..."),
-        () => $`pnpm rimraf package`
+        () => $`pnpm rimraf packages`
     );
 
-    console.info(scriptName, chalk.white("Generating SDK..."));
+    console.info(
+        scriptName,
+        chalk.white("Generating husqvarna-authentication-sdk...")
+    );
     await spinner(
         chalk.gray("Waiting please..."),
-        () => $`openapi-generator-cli generate --generator-key typescript-sdk`
+        () =>
+            $`openapi-generator-cli generate --generator-key husqvarna-authentication-sdk`
     );
 
     console.info(scriptName, chalk.white("Post generation set module..."));
     await spinner(chalk.gray("Waiting please..."), () =>
-        setTypeModuleAndUpdateTsConfig()
+        setTypeModuleAndUpdateTsConfig("husqvarna-authentication-sdk")
+    );
+    console.info(
+        scriptName,
+        chalk.white("Installing dependencies and building...")
+    );
+    await spinner(
+        chalk.gray("Waiting please..."),
+        () =>
+            $`cd packages/husqvarna-authentication-sdk && pnpm install && pnpm build`
+    );
+
+    enter();
+    console.info(
+        scriptName,
+        chalk.white("Generating automower-connect-sdk...")
+    );
+    await spinner(
+        chalk.gray("Waiting please..."),
+        () =>
+            $`openapi-generator-cli generate --generator-key automower-connect-sdk`
+    );
+    console.info(scriptName, chalk.white("Post generation set module..."));
+    await spinner(chalk.gray("Waiting please..."), () =>
+        setTypeModuleAndUpdateTsConfig("automower-connect-sdk")
     );
 
     console.info(
@@ -100,7 +140,32 @@ try {
     );
     await spinner(
         chalk.gray("Waiting please..."),
-        () => $`cd package && pnpm install && pnpm build`
+        () => $`cd packages/automower-connect-sdk && pnpm install && pnpm build`
+    );
+
+    enter();
+    console.info(
+        scriptName,
+        chalk.white("Generating husqvarna-connectivity-sdk...")
+    );
+    await spinner(
+        chalk.gray("Waiting please..."),
+        () =>
+            $`openapi-generator-cli generate --generator-key husqvarna-connectivity-sdk`
+    );
+    console.info(scriptName, chalk.white("Post generation set module..."));
+    await spinner(chalk.gray("Waiting please..."), () =>
+        setTypeModuleAndUpdateTsConfig("husqvarna-connectivity-sdk")
+    );
+
+    console.info(
+        scriptName,
+        chalk.white("Installing dependencies and building...")
+    );
+    await spinner(
+        chalk.gray("Waiting please..."),
+        () =>
+            $`cd packages/husqvarna-connectivity-sdk && pnpm install && pnpm build`
     );
 } catch (e) {
     console.info(chalk.red(`[ Build SDK ] Error: ${e}`));

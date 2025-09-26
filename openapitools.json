@@ -6,7 +6,7 @@
         "generators": {
             "husqvarna-authentication-sdk": {
                 "generatorName": "typescript-axios",
-                "inputSpec": "./husqvarna-authentication.yml",
+                "inputSpec": "./openApi/husqvarna-authentication.yml",
                 "output": "./packages/husqvarna-authentication-sdk",
                 "additionalProperties": {
                     "npmName": "@jboucly/husqvarna-authentication-sdk",
@@ -25,7 +25,7 @@
             },
             "automower-connect-sdk": {
                 "generatorName": "typescript-axios",
-                "inputSpec": "./husqvarna-automower.yml",
+                "inputSpec": "./openApi/automower-connect.yml",
                 "output": "./packages/automower-connect-sdk",
                 "additionalProperties": {
                     "npmName": "@jboucly/automower-connect-sdk",
@@ -44,7 +44,7 @@
             },
             "husqvarna-connectivity-sdk": {
                 "generatorName": "typescript-axios",
-                "inputSpec": "./husqvarna-connectivity.yml",
+                "inputSpec": "./openApi/husqvarna-connectivity.yml",
                 "output": "./packages/husqvarna-connectivity-sdk",
                 "additionalProperties": {
                     "npmName": "@jboucly/husqvarna-connectivity-sdk",
