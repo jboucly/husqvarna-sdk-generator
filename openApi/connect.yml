@@ -1,0 +1,300 @@
+openapi: 3.0.1
+info:
+  version: '1.0.0'
+  title: Husqvarna Connectivity API
+  license:
+    name: MIT
+  description: This API allows you to obtain information about your Husqvarna connected products.
+servers:
+  - url: 'https://api.connectivity.husqvarna.dev/v1'
+
+paths:
+  /devices:
+    get:
+      summary: Returns list of device ids the user has access to
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/DevicesResponse'
+        '401':
+          description: Failure, user could not be authenticated. X-Api-Key header or Bearer Token missing or invalid.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Failure, not found.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Failure, internal error.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /devices/{id}:
+    get:
+      summary: Returns the details of a specific device
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/Identifier'
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/DeviceResponse'
+        '401':
+          description: Failure, user could not be authenticated. X-Api-Key header or Bearer Token missing or invalid.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Failure, device not found.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Failure, internal error.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /devices/{id}/full:
+    get:
+      summary: Returns the full details of a specific device
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/Identifier'
+
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/FullDeviceResponse'
+        '401':
+          description: Failure, user could not be authenticated. X-Api-Key header or Bearer Token missing or invalid.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Failure, device not found.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Failure, internal error.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /specifications/{specificationId}:
+    get:
+      summary: Returns the details of a specific specification
+      parameters:
+        - name: specificationId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: hexadecimal
+      responses:
+        '200':
+          description: Success.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/SpecificationResponse'
+        '401':
+          description: Failure, user could not be authenticated. X-Api-Key header or Bearer Token missing or invalid.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Failure, specification not found.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Failure, internal error.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+security: # these things are applied on all operations
+  - ApiKeyAuth: []
+    Authorization: []
+components:
+  securitySchemes: # here we defined what security headers we expect globally
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: Application API key obtained through developer portal.
+    Authorization:
+      type: http
+      scheme: bearer
+      description: Access token obtained by Authentication API call POST /oauth2/token.
+  schemas:
+    DevicesResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                format: uuid
+                example: 'baef9e0e-8f33-4d88-...'
+              type:
+                type: string
+                example: 'device'
+    DeviceResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+              example: 'baef9e0e-8f33-4d88-a8c5-1ca96d25b627'
+            type:
+              type: string
+              example: 'device'
+            attributes:
+              type: object
+              properties:
+                udm:
+                  type: object
+                  properties:
+                    specificationId:
+                      type: string
+                      format: hexadecimal
+                    payload:
+                      type: object
+    FullDeviceResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            type:
+              type: string
+              example: device
+            attributes:
+              $ref: '#/components/schemas/DeviceAttributes'
+    DeviceAttributes:
+      anyOf:
+        - type: object
+          properties:
+            happ:
+              type: object
+              properties:
+                specificationId:
+                  type: string
+                  format: hexadecimal
+                payload:
+                  type: object
+        - type: object
+          properties:
+            ble-advertise:
+              type: object
+              properties:
+                specificationId:
+                  type: string
+                  format: hexadecimal
+                payload:
+                  type: object
+        - type: object
+          properties:
+            trackunit:
+              type: object
+              properties:
+                specificationId:
+                  type: string
+                  format: hexadecimal
+                payload:
+                  type: object
+        - type: object
+          properties:
+            mower:
+              type: object
+              properties:
+                specificationId:
+                  type: string
+                  format: hexadecimal
+                payload:
+                  type: object
+    SpecificationResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              format: hexadecimal
+            type:
+              type: string
+              example: specification
+            attributes:
+              type: object
+    ErrorResponse:
+      description: A {JSON:API} error message.
+      type: object
+      required:
+        - errors
+      properties:
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiErrorObject'
+    JsonApiErrorObject:
+      description: A {JSON:API} error message.
+      type: object
+      properties:
+        status:
+          type: string
+          example: 'SOME_REASON_CODE'
+        code:
+          type: string
+          example: 'nnn'
+        title:
+          type: string
+          example: 'Some summary of the problem.'
+        detail:
+          type: string
+          example: 'Some details about the specific problem.'
+    Identifier:
+      type: string
+      format: uuid
+      description: Unique identifier.
+      example: 'd8a1faef-2ee3-421d-a3f8-f8ed577c2ad3'
