@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { System } from '@jboucly/automower-connect-sdk';
+import { System } from 'automower-connect-sdk';
 
 const instance: System = {
     name,

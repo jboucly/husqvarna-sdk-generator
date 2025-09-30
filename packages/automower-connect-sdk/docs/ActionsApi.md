@@ -25,7 +25,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdActionsPostRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -87,7 +87,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdCalendarPostRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -148,7 +148,7 @@ Confirm current non fatal error on the mower. Same function that is available in
 import {
     ActionsApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -207,7 +207,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdSettingsPostRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -268,7 +268,7 @@ Reset the cutting blade usage time. Same function that is available in the Autom
 import {
     ActionsApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -327,7 +327,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdStayOutZonesStayOutIdPatchRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -392,7 +392,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdWorkAreasWorkAreaIdCalendarPostRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);
@@ -457,7 +457,7 @@ import {
     ActionsApi,
     Configuration,
     MowersIdWorkAreasWorkAreaIdPatchRequest
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new ActionsApi(configuration);

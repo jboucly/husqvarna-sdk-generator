@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { PostOAuth2Response } from '@jboucly/husqvarna-authentication-sdk';
+import { PostOAuth2Response } from 'husqvarna-authentication-sdk';
 
 const instance: PostOAuth2Response = {
     accessToken,

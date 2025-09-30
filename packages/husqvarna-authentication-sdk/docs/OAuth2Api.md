@@ -18,7 +18,7 @@ Revoke an access token and the associated refresh tokens.
 import {
     OAuth2Api,
     Configuration
-} from '@jboucly/husqvarna-authentication-sdk';
+} from 'husqvarna-authentication-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new OAuth2Api(configuration);
@@ -71,7 +71,7 @@ Create an access_token.
 import {
     OAuth2Api,
     Configuration
-} from '@jboucly/husqvarna-authentication-sdk';
+} from 'husqvarna-authentication-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new OAuth2Api(configuration);

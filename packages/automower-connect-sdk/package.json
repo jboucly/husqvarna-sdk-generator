@@ -1,14 +1,14 @@
 {
-  "name": "@jboucly/automower-connect-sdk",
+  "name": "automower-connect-sdk",
   "version": "1.0.0",
-  "description": "OpenAPI client for @jboucly/automower-connect-sdk",
+  "description": "OpenAPI client for automower-connect-sdk",
   "author": "OpenAPI-Generator Contributors",
   "keywords": [
     "axios",
     "typescript",
     "openapi-client",
     "openapi-generator",
-    "@jboucly/automower-connect-sdk"
+    "automower-connect-sdk"
   ],
   "license": "Unlicense",
   "main": "./dist/index.js",

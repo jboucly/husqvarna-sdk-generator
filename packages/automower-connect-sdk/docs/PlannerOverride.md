@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { PlannerOverride } from '@jboucly/automower-connect-sdk';
+import { PlannerOverride } from 'automower-connect-sdk';
 
 const instance: PlannerOverride = {
     action,

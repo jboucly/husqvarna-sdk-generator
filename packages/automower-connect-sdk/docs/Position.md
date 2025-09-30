@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Position } from '@jboucly/automower-connect-sdk';
+import { Position } from 'automower-connect-sdk';
 
 const instance: Position = {
     latitude,

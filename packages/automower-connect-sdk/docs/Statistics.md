@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Statistics } from '@jboucly/automower-connect-sdk';
+import { Statistics } from 'automower-connect-sdk';
 
 const instance: Statistics = {
     cuttingBladeUsageTime,

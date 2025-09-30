@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiDataDocumentStayOutZones } from '@jboucly/automower-connect-sdk';
+import { JsonApiDataDocumentStayOutZones } from 'automower-connect-sdk';
 
 const instance: JsonApiDataDocumentStayOutZones = {
     data,

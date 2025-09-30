@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiErrorDocument } from '@jboucly/automower-connect-sdk';
+import { JsonApiErrorDocument } from 'automower-connect-sdk';
 
 const instance: JsonApiErrorDocument = {
     errors,

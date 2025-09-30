@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { MowersIdStayOutZonesStayOutIdPatchRequest } from '@jboucly/automower-connect-sdk';
+import { MowersIdStayOutZonesStayOutIdPatchRequest } from 'automower-connect-sdk';
 
 const instance: MowersIdStayOutZonesStayOutIdPatchRequest = {
     data,

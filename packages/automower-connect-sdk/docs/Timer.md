@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Timer } from '@jboucly/automower-connect-sdk';
+import { Timer } from 'automower-connect-sdk';
 
 const instance: Timer = {
     dateTime,

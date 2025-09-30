@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { FullDeviceResponseData } from '@jboucly/husqvarna-connectivity-sdk';
+import { FullDeviceResponseData } from 'husqvarna-connectivity-sdk';
 
 const instance: FullDeviceResponseData = {
     id,

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { MowersIdWorkAreasWorkAreaIdPatchRequestDataAttributes } from '@jboucly/automower-connect-sdk';
+import { MowersIdWorkAreasWorkAreaIdPatchRequestDataAttributes } from 'automower-connect-sdk';
 
 const instance: MowersIdWorkAreasWorkAreaIdPatchRequestDataAttributes = {
     cuttingHeight,

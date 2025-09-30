@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { ParkUntilNextSchedule } from '@jboucly/automower-connect-sdk';
+import { ParkUntilNextSchedule } from 'automower-connect-sdk';
 
 const instance: ParkUntilNextSchedule = {
     type,

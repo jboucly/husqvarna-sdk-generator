@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { WorkAreaData } from '@jboucly/automower-connect-sdk';
+import { WorkAreaData } from 'automower-connect-sdk';
 
 const instance: WorkAreaData = {
     workAreaId,

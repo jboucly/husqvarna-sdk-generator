@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiErrorObject } from '@jboucly/husqvarna-connectivity-sdk';
+import { JsonApiErrorObject } from 'husqvarna-connectivity-sdk';
 
 const instance: JsonApiErrorObject = {
     status,

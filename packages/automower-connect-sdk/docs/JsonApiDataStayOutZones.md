@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiDataStayOutZones } from '@jboucly/automower-connect-sdk';
+import { JsonApiDataStayOutZones } from 'automower-connect-sdk';
 
 const instance: JsonApiDataStayOutZones = {
     type,

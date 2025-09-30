@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Metadata } from '@jboucly/automower-connect-sdk';
+import { Metadata } from 'automower-connect-sdk';
 
 const instance: Metadata = {
     connected,

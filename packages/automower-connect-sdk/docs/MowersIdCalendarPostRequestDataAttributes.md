@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { MowersIdCalendarPostRequestDataAttributes } from '@jboucly/automower-connect-sdk';
+import { MowersIdCalendarPostRequestDataAttributes } from 'automower-connect-sdk';
 
 const instance: MowersIdCalendarPostRequestDataAttributes = {
     tasks,

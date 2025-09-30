@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { ErrorResponse } from '@jboucly/husqvarna-connectivity-sdk';
+import { ErrorResponse } from 'husqvarna-connectivity-sdk';
 
 const instance: ErrorResponse = {
     errors,

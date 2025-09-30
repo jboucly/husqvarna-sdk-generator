@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { DevicesResponseDataInner } from '@jboucly/husqvarna-connectivity-sdk';
+import { DevicesResponseDataInner } from 'husqvarna-connectivity-sdk';
 
 const instance: DevicesResponseDataInner = {
     id,

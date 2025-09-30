@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Calendar } from '@jboucly/automower-connect-sdk';
+import { Calendar } from 'automower-connect-sdk';
 
 const instance: Calendar = {
     tasks,

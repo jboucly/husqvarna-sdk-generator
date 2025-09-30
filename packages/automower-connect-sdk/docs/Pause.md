@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Pause } from '@jboucly/automower-connect-sdk';
+import { Pause } from 'automower-connect-sdk';
 
 const instance: Pause = {
     type,

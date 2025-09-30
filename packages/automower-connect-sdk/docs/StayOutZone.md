@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { StayOutZone } from '@jboucly/automower-connect-sdk';
+import { StayOutZone } from 'automower-connect-sdk';
 
 const instance: StayOutZone = {
     id,

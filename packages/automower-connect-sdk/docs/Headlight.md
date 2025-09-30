@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Headlight } from '@jboucly/automower-connect-sdk';
+import { Headlight } from 'automower-connect-sdk';
 
 const instance: Headlight = {
     headlight,

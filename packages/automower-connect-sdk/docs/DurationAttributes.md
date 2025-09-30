@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { DurationAttributes } from '@jboucly/automower-connect-sdk';
+import { DurationAttributes } from 'automower-connect-sdk';
 
 const instance: DurationAttributes = {
     duration,

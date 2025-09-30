@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { ParkUntilFurtherNotice } from '@jboucly/automower-connect-sdk';
+import { ParkUntilFurtherNotice } from 'automower-connect-sdk';
 
 const instance: ParkUntilFurtherNotice = {
     type,

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { CalendarTaskWorkArea } from '@jboucly/automower-connect-sdk';
+import { CalendarTaskWorkArea } from 'automower-connect-sdk';
 
 const instance: CalendarTaskWorkArea = {
     start,

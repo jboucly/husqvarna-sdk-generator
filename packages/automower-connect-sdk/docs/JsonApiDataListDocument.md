@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiDataListDocument } from '@jboucly/automower-connect-sdk';
+import { JsonApiDataListDocument } from 'automower-connect-sdk';
 
 const instance: JsonApiDataListDocument = {
     data,

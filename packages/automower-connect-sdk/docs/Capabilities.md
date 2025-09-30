@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Capabilities } from '@jboucly/automower-connect-sdk';
+import { Capabilities } from 'automower-connect-sdk';
 
 const instance: Capabilities = {
     canConfirmError,

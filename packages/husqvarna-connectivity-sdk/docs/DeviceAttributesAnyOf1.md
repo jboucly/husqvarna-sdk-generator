@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { DeviceAttributesAnyOf1 } from '@jboucly/husqvarna-connectivity-sdk';
+import { DeviceAttributesAnyOf1 } from 'husqvarna-connectivity-sdk';
 
 const instance: DeviceAttributesAnyOf1 = {
     bleAdvertise,

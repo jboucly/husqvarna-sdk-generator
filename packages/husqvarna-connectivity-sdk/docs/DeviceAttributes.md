@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { DeviceAttributes } from '@jboucly/husqvarna-connectivity-sdk';
+import { DeviceAttributes } from 'husqvarna-connectivity-sdk';
 
 const instance: DeviceAttributes = {
     happ,

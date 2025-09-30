@@ -1,14 +1,14 @@
 {
-  "name": "@jboucly/husqvarna-connectivity-sdk",
+  "name": "husqvarna-connectivity-sdk",
   "version": "1.0.0",
-  "description": "OpenAPI client for @jboucly/husqvarna-connectivity-sdk",
+  "description": "OpenAPI client for husqvarna-connectivity-sdk",
   "author": "OpenAPI-Generator Contributors",
   "keywords": [
     "axios",
     "typescript",
     "openapi-client",
     "openapi-generator",
-    "@jboucly/husqvarna-connectivity-sdk"
+    "husqvarna-connectivity-sdk"
   ],
   "license": "Unlicense",
   "main": "./dist/index.js",

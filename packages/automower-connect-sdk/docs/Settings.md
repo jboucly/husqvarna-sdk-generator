@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Settings } from '@jboucly/automower-connect-sdk';
+import { Settings } from 'automower-connect-sdk';
 
 const instance: Settings = {
     cuttingHeight,

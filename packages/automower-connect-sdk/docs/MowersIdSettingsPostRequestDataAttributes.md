@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { MowersIdSettingsPostRequestDataAttributes } from '@jboucly/automower-connect-sdk';
+import { MowersIdSettingsPostRequestDataAttributes } from 'automower-connect-sdk';
 
 const instance: MowersIdSettingsPostRequestDataAttributes = {
     cuttingHeight,

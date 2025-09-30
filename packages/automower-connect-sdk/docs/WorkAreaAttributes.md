@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { WorkAreaAttributes } from '@jboucly/automower-connect-sdk';
+import { WorkAreaAttributes } from 'automower-connect-sdk';
 
 const instance: WorkAreaAttributes = {
     duration,

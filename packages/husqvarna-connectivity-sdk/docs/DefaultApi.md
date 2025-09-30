@@ -19,7 +19,7 @@ All URIs are relative to *https://api.connectivity.husqvarna.dev/v1*
 import {
     DefaultApi,
     Configuration
-} from '@jboucly/husqvarna-connectivity-sdk';
+} from 'husqvarna-connectivity-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new DefaultApi(configuration);
@@ -65,7 +65,7 @@ This endpoint does not have any parameters.
 import {
     DefaultApi,
     Configuration
-} from '@jboucly/husqvarna-connectivity-sdk';
+} from 'husqvarna-connectivity-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new DefaultApi(configuration);
@@ -118,7 +118,7 @@ const { status, data } = await apiInstance.devicesIdFullGet(
 import {
     DefaultApi,
     Configuration
-} from '@jboucly/husqvarna-connectivity-sdk';
+} from 'husqvarna-connectivity-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new DefaultApi(configuration);
@@ -171,7 +171,7 @@ const { status, data } = await apiInstance.devicesIdGet(
 import {
     DefaultApi,
     Configuration
-} from '@jboucly/husqvarna-connectivity-sdk';
+} from 'husqvarna-connectivity-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new DefaultApi(configuration);

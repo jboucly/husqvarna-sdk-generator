@@ -22,7 +22,7 @@ List data for all mowers linked to the user associated with the access token.
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);
@@ -72,7 +72,7 @@ Get data for a mower linked to the user associated with the access token.
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);
@@ -129,7 +129,7 @@ Get last occurred messages for a mower (max 50). Includes the position when the 
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);
@@ -186,7 +186,7 @@ Get all stay out zones for a mower linked to the user associated with the access
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);
@@ -243,7 +243,7 @@ Get all detailed work areas for a mower linked to the user associated with the a
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);
@@ -300,7 +300,7 @@ Get detailed data for a work area for a mower linked to the user associated with
 import {
     MowerApi,
     Configuration
-} from '@jboucly/automower-connect-sdk';
+} from 'automower-connect-sdk';
 
 const configuration = new Configuration();
 const apiInstance = new MowerApi(configuration);

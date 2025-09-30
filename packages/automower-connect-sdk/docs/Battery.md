@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Battery } from '@jboucly/automower-connect-sdk';
+import { Battery } from 'automower-connect-sdk';
 
 const instance: Battery = {
     batteryPercent,

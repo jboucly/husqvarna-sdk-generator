@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiDataWorkArea } from '@jboucly/automower-connect-sdk';
+import { JsonApiDataWorkArea } from 'automower-connect-sdk';
 
 const instance: JsonApiDataWorkArea = {
     type,

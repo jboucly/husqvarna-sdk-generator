@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Messages } from '@jboucly/automower-connect-sdk';
+import { Messages } from 'automower-connect-sdk';
 
 const instance: Messages = {
     messages,

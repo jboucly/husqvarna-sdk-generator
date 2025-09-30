@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { Planner } from '@jboucly/automower-connect-sdk';
+import { Planner } from 'automower-connect-sdk';
 
 const instance: Planner = {
     nextStartTimestamp,

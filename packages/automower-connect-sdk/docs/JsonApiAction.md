@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { JsonApiAction } from '@jboucly/automower-connect-sdk';
+import { JsonApiAction } from 'automower-connect-sdk';
 
 const instance: JsonApiAction = {
     type,

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { SpecificationResponse } from '@jboucly/husqvarna-connectivity-sdk';
+import { SpecificationResponse } from 'husqvarna-connectivity-sdk';
 
 const instance: SpecificationResponse = {
     data,
