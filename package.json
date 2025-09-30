@@ -5,7 +5,10 @@
     "scripts": {
         "fetch:openapi": "zx ./scripts/fetchOpenApi.mjs",
         "sdk:generate": "openapi-generator-cli generate --generator-key typescript-sdk",
-        "sdk:build": "zx ./scripts/build-sdk.mjs"
+        "sdk:build": "zx ./scripts/build-sdk.mjs",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "dev": "tsx src/index.ts"
     },
     "keywords": [
         "husqvarna",
@@ -22,10 +25,12 @@
     "packageManager": "pnpm@10.17.1",
     "devDependencies": {
         "@openapitools/openapi-generator-cli": "^2.23.4",
+        "@types/node": "^24.6.0",
         "chalk": "^5.6.2",
         "dotenv": "^17.2.2",
+        "prettier": "^3.6.2",
         "rimraf": "^6.0.1",
-        "ts-node": "^10.9.2",
+        "tsx": "^4.20.6",
         "zx": "^8.8.3"
     }
 }
