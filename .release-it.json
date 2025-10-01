@@ -12,7 +12,7 @@
         "tagName": "v${version}",
         "pushArgs": ["--follow-tags"],
         "requireCleanWorkingDir": false,
-        "commitMessage": "chore: bump version to ${version}"
+        "commitMessage": "chore: bump version to v${version}"
     },
     "npm": {
         "publish": false
