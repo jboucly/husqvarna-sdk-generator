@@ -20,9 +20,6 @@ importers:
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
-      husqvarna-authentication-sdk:
-        specifier: ^1.0.0
-        version: 1.0.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -596,9 +593,6 @@ packages:
   https-proxy-agent@7.0.6:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
-
-  husqvarna-authentication-sdk@1.0.0:
-    resolution: {integrity: sha512-2Yth1WjsQgxB+ekzGuiGmT2ZTpfSGFA4ItVYe4w0LeNgAJnMLgpHD9LAtSzvFjtBlauZUdnzBZO+dY1GtZ11Xg==}
 
   iconv-lite@0.7.0:
     resolution: {integrity: sha512-cf6L2Ds3h57VVmkZe+Pn+5APsT7FpqJtEhhieDCvrE2MK5Qk9MyffgQyuxQTm6BChfeZNtcOLHp9IcWRVcIcBQ==}
@@ -1455,12 +1449,6 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
-
-  husqvarna-authentication-sdk@1.0.0:
-    dependencies:
-      axios: 1.12.2
-    transitivePeerDependencies:
-      - debug
 
   iconv-lite@0.7.0:
     dependencies:
