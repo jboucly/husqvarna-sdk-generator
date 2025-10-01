@@ -1,8 +1,15 @@
 {
   "name": "husqvarna-authentication-sdk",
   "version": "1.0.0",
-  "description": "OpenAPI client for husqvarna-authentication-sdk",
-  "author": "OpenAPI-Generator Contributors",
+  "description": "Husqvarna Authentication API SDK",
+  "author": {
+    "name": "Jboucly",
+    "email": "contact@jboucly.fr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jboucly/husqvarna-sdk-generator.git"
+  },
   "keywords": [
     "axios",
     "typescript",
@@ -10,7 +17,7 @@
     "openapi-generator",
     "husqvarna-authentication-sdk"
   ],
-  "license": "Unlicense",
+  "license": "MIT",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "module": "./dist/esm/index.js",

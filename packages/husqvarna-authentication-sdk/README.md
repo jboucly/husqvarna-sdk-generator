@@ -1,71 +1,93 @@
-## husqvarna-authentication-sdk@1.0.0
+<div align="center">
+  <img src="https://developer.husqvarnagroup.cloud/assets/husqvarna-developer-logo-CxG7Npke.svg" alt="Logo" width=300"/>
+</div>
 
-This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
+<br />
 
-Environment
-* Node.js
-* Webpack
-* Browserify
+<div align="center">
+    <img src="https://img.shields.io/badge/OpenAPI%20Generator-2.23.1-6BA539?logo=openapiinitiative&logoColor=white&style=for-the-badge" alt="OpenApi" />
+</div>
+<br />
 
-Language level
-* ES5 - you must have a Promises/A+ library installed
-* ES6
+## husqvarna-authentication-sdk (Unofficial)
 
-Module system
-* CommonJS
-* ES6 module system
+This package provides a **TypeScript/JavaScript SDK** for the [Husqvarna Authentication API](https://developer.husqvarnagroup.cloud/apis/authentication-api).
 
-It can be used in both TypeScript and JavaScript. In TypeScript, the definition will be automatically resolved via `package.json`. ([Reference](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html))
+⚠️ **Disclaimer** ⚠️
+This SDK is **not an official Husqvarna product**.
+It is an open-source community project, built on top of the public API documented by Husqvarna. It's generated from the OpenAPI specification provided by Husqvarna with [OpenAPI Generator](https://openapi-generator.tech/).
 
-### Building
+Users of this SDK must :
 
-To build and compile the typescript sources to javascript use:
-```
-npm install
-npm run build
-```
+- Create their own API key and OAuth2 credentials on the [Husqvarna Developer Portal](https://developer.husqvarnagroup.cloud/).
+- Follow the official [API Terms of Use](https://developer.husqvarnagroup.cloud/terms).
 
-### Publishing
+This package is use
 
-First build the package then run `npm publish`
+### Installation
 
-### Consuming
+To install the package, run one of the following commands in your project folder :
 
-navigate to the folder of your consuming project and run one of the following commands.
+NPM :
 
-_published:_
-
-```
-npm install husqvarna-authentication-sdk@1.0.0 --save
+```bash
+npm install husqvarna-authentication-sdk
 ```
 
-_unPublished (not recommended):_
+PNPM :
 
+```bash
+pnpm add husqvarna-authentication-sdk
 ```
-npm install PATH_TO_GENERATED_PACKAGE --save
+
+Yarn :
+
+```bash
+yarn add husqvarna-authentication-sdk
 ```
+
+### Usage
+
+Import the package in your TypeScript or JavaScript code :
+
+```typescript
+import { OAuth2Api, Oauth2TokenPostGrantTypeEnum } from 'husqvarna-authentication-sdk';
+
+const apiAuth = new OAuth2Api();
+
+const tokenReponse = await apiAuth.oauth2TokenPost({
+    clientId: <Application ID>,
+    clientSecret: <Application Secret>,
+    grantType: Oauth2TokenPostGrantTypeEnum.CLIENT_CREDENTIALS
+});
+
+console.info(`Access Token : ${tokenReponse.data.accessToken}`);
+```
+
+## Documentation
+
+The full API documentation is available on the [Husqvarna Developer Portal](https://developer.husqvarnagroup.cloud/apis/authentication-api).
 
 ### Documentation for API Endpoints
 
 All URIs are relative to *https://api.authentication.husqvarnagroup.dev/v1*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*OAuth2Api* | [**oauth2RevokePost**](docs/OAuth2Api.md#oauth2revokepost) | **POST** /oauth2/revoke | OAuth2 logout
-*OAuth2Api* | [**oauth2TokenPost**](docs/OAuth2Api.md#oauth2tokenpost) | **POST** /oauth2/token | OAuth2 login
-
+| Class       | Method                                                     | HTTP request            | Description   |
+| ----------- | ---------------------------------------------------------- | ----------------------- | ------------- |
+| _OAuth2Api_ | [**oauth2RevokePost**](docs/OAuth2Api.md#oauth2revokepost) | **POST** /oauth2/revoke | OAuth2 logout |
+| _OAuth2Api_ | [**oauth2TokenPost**](docs/OAuth2Api.md#oauth2tokenpost)   | **POST** /oauth2/token  | OAuth2 login  |
 
 ### Documentation For Models
 
- - [PostOAuth2Response](docs/PostOAuth2Response.md)
-
+- [PostOAuth2Response](docs/PostOAuth2Response.md)
 
 <a id="documentation-for-authorization"></a>
-## Documentation For Authorization
 
+## Documentation For Authorization
 
 Authentication schemes defined for the API:
 <a id="APIKeyHeader"></a>
+
 ### APIKeyHeader
 
 - **Type**: API key
@@ -73,9 +95,9 @@ Authentication schemes defined for the API:
 - **Location**: HTTP header
 
 <a id="AuthorizationHeader"></a>
+
 ### AuthorizationHeader
 
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
-
