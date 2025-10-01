@@ -32,20 +32,20 @@ jobs:
             - name: Publish husqvarna-authentication-sdk
               run: |
                   cd packages/husqvarna-authentication-sdk
-                  npm publish --access public
+                  npm publish --access public --auth-type=legacy
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
             - name: Publish automower-connect-sdk
               run: |
                   cd packages/automower-connect-sdk
-                  npm publish --access public
+                  npm publish --access public --auth-type=legacy
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
             - name: Publish husqvarna-connectivity-sdk
               run: |
                   cd packages/husqvarna-connectivity-sdk
-                  npm publish --access public
+                  npm publish --access public --auth-type=legacy
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
