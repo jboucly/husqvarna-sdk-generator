@@ -3,10 +3,10 @@
  */
 import 'dotenv/config';
 
+import { Configuration, MowerApi } from 'automower-connect-sdk';
 import chalk from 'chalk';
 import { OAuth2Api, Oauth2TokenPostGrantTypeEnum } from 'husqvarna-authentication-sdk';
-import { Configuration, MowerApi } from '../packages/automower-connect-sdk';
-import { DefaultApi as HusqvarnaConnectivityApi } from '../packages/husqvarna-connectivity-sdk';
+import { DefaultApi as HusqvarnaConnectivityApi } from 'husqvarna-connectivity-sdk';
 
 const main = async () => {
     // Authenticate with the Husqvarna Authentication API
