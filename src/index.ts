@@ -24,7 +24,6 @@ const main = async () => {
 
     const apiMower = new MowerApi(
         new Configuration({
-            accessToken: tokenReponse.data.access_token,
             apiKey: process.env.HUSQVARNA_CLIENT_ID || '',
             baseOptions: {
                 headers: {

@@ -16,13 +16,16 @@ const scriptName = chalk.cyan('[ Build SDK ] ');
 
 /** ############################## DEFINE FUNCTIONS ############################## */
 
-async function setTypeModuleAndUpdateTsConfig(name, description) {
+async function updatePackages(name, description) {
     const pkgPath = path.join(__dirname, '..', 'packages', name, 'package.json');
     const tsconfigPath = path.join(__dirname, '..', 'packages', name, 'tsconfig.json');
+    const newReadmePath = path.join(__dirname, '..', 'docs', `${name}.md`);
+    const oldReadmePath = path.join(__dirname, '..', 'packages', name, 'README.md');
 
+    // Update package.json
     if (fs.existsSync(pkgPath)) {
         const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-        delete pkg.repository; // Remove existing repository field if any
+        pkg.repository.url = 'https://github.com/jboucly/husqvarna-sdk-generator.git';
 
         pkg.description = description;
         pkg.type = 'module';
@@ -55,6 +58,7 @@ async function setTypeModuleAndUpdateTsConfig(name, description) {
         exit(1);
     }
 
+    // Update tsconfig.json
     if (fs.existsSync(tsconfigPath)) {
         const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf8'));
 
@@ -67,6 +71,13 @@ async function setTypeModuleAndUpdateTsConfig(name, description) {
     } else {
         console.error(scriptName, chalk.red('tsconfig.json not found'));
         exit(1);
+    }
+
+    // Copy README.md
+    if (fs.existsSync(newReadmePath)) {
+        console.info(scriptName, `${chalk.green('✓')} ${chalk.white('Copying README.md')}`);
+        fs.unlinkSync(oldReadmePath);
+        fs.copyFileSync(newReadmePath, oldReadmePath);
     }
 }
 
@@ -82,10 +93,9 @@ try {
         chalk.gray('Waiting please...'),
         () => $`openapi-generator-cli generate --generator-key husqvarna-authentication-sdk`
     );
-
     console.info(scriptName, chalk.white('Post generation set module...'));
     await spinner(chalk.gray('Waiting please...'), () =>
-        setTypeModuleAndUpdateTsConfig('husqvarna-authentication-sdk', 'Husqvarna Authentication API SDK')
+        updatePackages('husqvarna-authentication-sdk', 'Husqvarna Authentication API SDK')
     );
     console.info(scriptName, chalk.white('Installing dependencies and building...'));
     await spinner(
@@ -101,7 +111,7 @@ try {
     );
     console.info(scriptName, chalk.white('Post generation set module...'));
     await spinner(chalk.gray('Waiting please...'), () =>
-        setTypeModuleAndUpdateTsConfig('automower-connect-sdk', 'Husqvarna Automower Connect SDK')
+        updatePackages('automower-connect-sdk', 'Husqvarna Automower Connect SDK')
     );
 
     console.info(scriptName, chalk.white('Installing dependencies and building...'));
@@ -118,7 +128,7 @@ try {
     );
     console.info(scriptName, chalk.white('Post generation set module...'));
     await spinner(chalk.gray('Waiting please...'), () =>
-        setTypeModuleAndUpdateTsConfig('husqvarna-connectivity-sdk', 'Husqvarna Connectivity SDK')
+        updatePackages('husqvarna-connectivity-sdk', 'Husqvarna Connectivity SDK')
     );
 
     console.info(scriptName, chalk.white('Installing dependencies and building...'));

@@ -63,3 +63,41 @@ const tokenReponse = await apiAuth.oauth2TokenPost({
 
 console.info(`Access Token : ${tokenReponse.data.accessToken}`);
 ```
+
+## Documentation
+
+The full API documentation is available on the [Husqvarna Developer Portal](https://developer.husqvarnagroup.cloud/apis/authentication-api).
+
+### Documentation for API Endpoints
+
+All URIs are relative to *https://api.authentication.husqvarnagroup.dev/v1*
+
+| Class       | Method                                                     | HTTP request            | Description   |
+| ----------- | ---------------------------------------------------------- | ----------------------- | ------------- |
+| _OAuth2Api_ | [**oauth2RevokePost**](docs/OAuth2Api.md#oauth2revokepost) | **POST** /oauth2/revoke | OAuth2 logout |
+| _OAuth2Api_ | [**oauth2TokenPost**](docs/OAuth2Api.md#oauth2tokenpost)   | **POST** /oauth2/token  | OAuth2 login  |
+
+### Documentation For Models
+
+- [PostOAuth2Response](docs/PostOAuth2Response.md)
+
+<a id="documentation-for-authorization"></a>
+
+## Documentation For Authorization
+
+Authentication schemes defined for the API:
+<a id="APIKeyHeader"></a>
+
+### APIKeyHeader
+
+- **Type**: API key
+- **API key parameter name**: x-api-key
+- **Location**: HTTP header
+
+<a id="AuthorizationHeader"></a>
+
+### AuthorizationHeader
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
