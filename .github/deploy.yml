@@ -1,0 +1,52 @@
+name: Deploy
+
+on:
+    push:
+        tags: ['v*']
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: 'pnpm'
+                  registry-url: 'https://registry.npmjs.org'
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 10.17.1
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Build SDKs
+              run: node scripts/build-sdk.mjs
+
+            - name: Publish husqvarna-authentication-sdk
+              run: |
+                  cd packages/husqvarna-authentication-sdk
+                  npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish automower-connect-sdk
+              run: |
+                  cd packages/automower-connect-sdk
+                  npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Publish husqvarna-connectivity-sdk
+              run: |
+                  cd packages/husqvarna-connectivity-sdk
+                  npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
