@@ -8,7 +8,8 @@
         "sdk:build": "zx ./scripts/build-sdk.mjs",
         "prettier:check": "prettier --check .",
         "prettier:fix": "prettier --write .",
-        "dev": "tsx src/index.ts"
+        "dev": "tsx src/index.ts",
+        "release": "release-it"
     },
     "keywords": [
         "husqvarna",
@@ -25,10 +26,12 @@
     "packageManager": "pnpm@10.17.1",
     "devDependencies": {
         "@openapitools/openapi-generator-cli": "^2.23.4",
+        "@release-it/conventional-changelog": "^10.0.1",
         "@types/node": "^24.6.0",
         "chalk": "^5.6.2",
         "dotenv": "^17.2.2",
         "prettier": "^3.6.2",
+        "release-it": "^19.0.5",
         "rimraf": "^6.0.1",
         "tsx": "^4.20.6",
         "zx": "^8.8.3"

@@ -1,0 +1,20 @@
+{
+    "plugins": {
+        "@release-it/conventional-changelog": {
+            "infile": "CHANGELOG.md",
+            "preset": "angular",
+            "ignoreRecommendedBump": true
+        }
+    },
+    "git": {
+        "requireBranch": "main",
+        "requireCommits": true,
+        "tagName": "v${version}",
+        "pushArgs": ["--follow-tags"],
+        "requireCleanWorkingDir": false,
+        "commitMessage": "chore: bump version to ${version}"
+    },
+    "npm": {
+        "publish": false
+    }
+}
