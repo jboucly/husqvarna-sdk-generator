@@ -1,6 +1,6 @@
 {
     "name": "husqvarna-sdk-generator",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Generator of SDK for Husqvarna APIs",
     "scripts": {
         "fetch:openapi": "zx ./scripts/fetchOpenApi.mjs",
