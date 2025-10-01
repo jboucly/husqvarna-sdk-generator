@@ -27,7 +27,7 @@ jobs:
               run: pnpm install
 
             - name: Build SDKs
-              run: node scripts/build-sdk.mjs
+              run: pnpm sdk:build
 
             - name: Publish husqvarna-authentication-sdk
               run: |
