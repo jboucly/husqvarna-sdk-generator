@@ -36,3 +36,6 @@ jobs:
 
             - name: Test SDKs
               run: pnpm dev
+              env:
+                  HUSQVARNA_CLIENT_ID: ${{ secrets.HUSQVARNA_CLIENT_ID }}
+                  HUSQVARNA_CLIENT_SECRET: ${{ secrets.HUSQVARNA_CLIENT_SECRET }}
