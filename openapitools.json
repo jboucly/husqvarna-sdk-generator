@@ -10,7 +10,7 @@
                 "output": "./packages/husqvarna-authentication-sdk",
                 "additionalProperties": {
                     "npmName": "husqvarna-authentication-sdk",
-                    "npmVersion": "1.0.0",
+                    "npmVersion": "1.0.1",
                     "supportsES6": true,
                     "useESModules": true,
                     "withInterfaces": true,
