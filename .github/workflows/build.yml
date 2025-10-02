@@ -33,3 +33,6 @@ jobs:
 
             - name: Build SDKs
               run: pnpm sdk:build
+
+            - name: Test SDKs
+              run: pnpm dev
