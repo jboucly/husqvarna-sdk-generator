@@ -17,12 +17,21 @@ importers:
       '@types/node':
         specifier: ^24.6.0
         version: 24.6.0
+      automower-connect-sdk:
+        specifier: ^1.0.0
+        version: 1.0.0
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
+      husqvarna-authentication-sdk:
+        specifier: ^1.0.1
+        version: 1.0.1
+      husqvarna-connectivity-sdk:
+        specifier: ^1.0.0
+        version: 1.0.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -555,6 +564,9 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
+  automower-connect-sdk@1.0.0:
+    resolution: {integrity: sha512-QJKM/aUs2x9k/MFjQLXc3Ujv7RxsrKM/JegdLMwN/sD9gpJ7L3qy9xtRloHrObupx6vct5QpUXiTiQgftR3cOg==}
+
   axios@1.12.2:
     resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
 
@@ -1040,6 +1052,12 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+
+  husqvarna-authentication-sdk@1.0.1:
+    resolution: {integrity: sha512-+JJzOhXAiq+fj/WEG76kQjYw5DW4wzZU3GcPPi1tJdrq4EpLmx+5mt19TirVR+fQNq/qO229JvWZsHRT5bm17g==}
+
+  husqvarna-connectivity-sdk@1.0.0:
+    resolution: {integrity: sha512-NBNLM7MtiDVK9XVVMBMNIR9dgy3atkI8E4CkOD3fgqfy2qIUxjSjArkP78yUPs9mWTmXMKQoqzPcfk/jaZuJcA==}
 
   iconv-lite@0.7.0:
     resolution: {integrity: sha512-cf6L2Ds3h57VVmkZe+Pn+5APsT7FpqJtEhhieDCvrE2MK5Qk9MyffgQyuxQTm6BChfeZNtcOLHp9IcWRVcIcBQ==}
@@ -2151,6 +2169,12 @@ snapshots:
 
   asynckit@0.4.0: {}
 
+  automower-connect-sdk@1.0.0:
+    dependencies:
+      axios: 1.12.2
+    transitivePeerDependencies:
+      - debug
+
   axios@1.12.2:
     dependencies:
       follow-redirects: 1.15.11
@@ -2679,6 +2703,18 @@ snapshots:
       - supports-color
 
   human-signals@5.0.0: {}
+
+  husqvarna-authentication-sdk@1.0.1:
+    dependencies:
+      axios: 1.12.2
+    transitivePeerDependencies:
+      - debug
+
+  husqvarna-connectivity-sdk@1.0.0:
+    dependencies:
+      axios: 1.12.2
+    transitivePeerDependencies:
+      - debug
 
   iconv-lite@0.7.0:
     dependencies:
